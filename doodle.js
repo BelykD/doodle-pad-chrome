@@ -1,3 +1,9 @@
+/*
+Doodle Pad - Chrome Extension
+
+Author: Dylan Beylk
+*/
+
 const canvas = document.getElementById('tileMap');
 const context = canvas.getContext('2d');
 
