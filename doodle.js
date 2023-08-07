@@ -28,15 +28,15 @@ const tools = [ // Array to store color palette data
     'red', 'orangered', 'darkorange', 'orange', 'gold', 'yellow', 'greenyellow', 'chartreuse', 'lime',
     'limegreen', 'springgreen', 'cyan', 'darkturquoise', 'dodgerblue', 'blue', 'blueviolet', 'darkviolet',
     'darkorchid', 'darkmagenta', 'deeppink', 'hotpink', 'pink', 'crimson', 'brown', 'indianred', 'firebrick', 
-    'darkred', 'peachpuff', 'moccasin', 'papayawhip', 'lemonchiffon', 'mistyrose', 'lavender', 'khaki', 'gold', 
-    'lightsalmon', 'coral', 'orangered', 'darkorange', 'tomato', 'red', 'maroon', 'darkkhaki', 'darkolivegreen', 
-    'darkgreen', 'seagreen', 'teal', 'midnightblue', 'darkslateblue', 'mediumblue', 'royalblue', 'mediumslateblue', 
-    'slateblue', 'purple', 'darkmagenta', 'mediumorchid', 'darkorchid', 'darkviolet', 'blueviolet', 'indigo',
-    'darkslategray', 'cadetblue', 'deepskyblue', 'steelblue', 'cornflowerblue', 'mediumaquamarine', 'turquoise', 
-    'darkturquoise', 'lightseagreen', 'mediumspringgreen', 'mediumseagreen', 'seagreen', 'forestgreen', 'darkgreen', 
-    'yellowgreen', 'olivedrab', 'olive', 'darkolivegreen', 'mediumseagreen', 'darkseagreen', 'mediumslateblue', 
-    'slategray', 'lightslategray', 'darkslategray', 'black'
+    'darkred', 'peachpuff', 'moccasin', 'papayawhip', 'lemonchiffon', 'mistyrose', 'lavender', 'khaki', 'aquamarine', 
+    'lightsalmon', 'coral', 'tomato', 'green', 'maroon', 'darkkhaki', 'olivegreen', 'darkgreen', 'seagreen', 'teal', 
+    'midnightblue', 'darkslateblue', 'mediumblue', 'royalblue', 'mediumslateblue', 'slateblue', 'purple', 'magenta', 
+    'mediumorchid', 'slategray', 'indigo', 'darkslategray', 'cadetblue', 'deepskyblue', 'steelblue', 'cornflowerblue', 
+    'mediumaquamarine', 'turquoise', 'lightseagreen', 'mediumspringgreen', 'mediumseagreen', 'forestgreen', 
+    'yellowgreen', 'olivedrab', 'black', 'snow', 'honeydew', 'mintcream', 'azure', 'aliceblue', 'ghostwhite', 
+    'whitesmoke', 'seashell', 'beige', 'oldlace'
 ];
+
 // Drawing function to change colors of tiles when clicked
 function changeTileOnClick(event) {
     const xLoc = event.clientX - canvas.offsetLeft;
