@@ -8,6 +8,12 @@
         "default_popup": "index.html",
         "default_title": "Doodle Pad"
     },
+    "icons": {
+        "16": "Assets/icon16.png",
+        "32": "Assets/icon32.png",
+        "48": "Assets/icon48.png",
+        "128": "Assets/icon128.png"
+    },
     "permissions": [
         "activeTab"
       ],      
