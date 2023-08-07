@@ -18,7 +18,6 @@ saveImg.src = 'Assets/save.png'
 const save = context.createPattern(saveImg, "repeat");
 
 const tiles = []; // Array to be populated with tile data
-
 const tools = [ // Array to store color palette data
     'red', 'orangered', 'darkorange', 'orange', 'gold', 'yellow', 'greenyellow', 'chartreuse', 'lime',
     'limegreen', 'springgreen', 'cyan', 'darkturquoise', 'dodgerblue', 'blue', 'blueviolet', 'darkviolet',
@@ -32,7 +31,6 @@ const tools = [ // Array to store color palette data
     'yellowgreen', 'olivedrab', 'olive', 'darkolivegreen', 'mediumseagreen', 'darkseagreen', 'mediumslateblue', 
     'slategray', 'lightslategray', 'darkslategray', 'black'
 ];
-
 // Drawing function to change colors of tiles when clicked
 function changeTileOnClick(event) {
     const xLoc = event.clientX - canvas.offsetLeft;
