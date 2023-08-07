@@ -13,15 +13,11 @@
         "32": "Assets/icon32.png",
         "48": "Assets/icon48.png",
         "128": "Assets/icon128.png"
-    },
-    "permissions": [
-        "activeTab"
-      ],      
+    },   
     "content_scripts": [
         {
           "matches": ["<all_urls>"],
-          "run_at": "document_end",
           "css": ["styles.css"]
         }
-      ]
+    ]
 }
