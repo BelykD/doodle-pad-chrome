@@ -1,7 +1,7 @@
 {
     "name": "Doodle Pad",
     "version": "1.0.0",
-    "description": "Doodle pad Chrome Extension",
+    "description": "Doodle Pad Canvas - Draw in your browser!",
     "manifest_version": 3,
     "author": "Dylan Belyk",
     "action": {
