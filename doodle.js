@@ -25,18 +25,16 @@ const save = context.createPattern(saveImg, "repeat");
 
 const tiles = []; // Array to be populated with tile data
 const tools = [ // Array to store color palette data
-    'red', 'orangered', 'darkorange', 'orange', 'gold', 'yellow', 'greenyellow', 'chartreuse', 'lime',
-    'limegreen', 'springgreen', 'cyan', 'darkturquoise', 'dodgerblue', 'blue', 'blueviolet', 'darkviolet',
-    'darkorchid', 'darkmagenta', 'deeppink', 'hotpink', 'pink', 'crimson', 'brown', 'indianred', 'firebrick', 
-    'darkred', 'peachpuff', 'moccasin', 'papayawhip', 'lemonchiffon', 'mistyrose', 'lavender', 'khaki', 'aquamarine', 
-    'lightsalmon', 'coral', 'tomato', 'green', 'maroon', 'darkkhaki', 'olivegreen', 'darkgreen', 'seagreen', 'teal', 
-    'midnightblue', 'darkslateblue', 'mediumblue', 'royalblue', 'mediumslateblue', 'slateblue', 'purple', 'magenta', 
-    'mediumorchid', 'slategray', 'indigo', 'darkslategray', 'cadetblue', 'deepskyblue', 'steelblue', 'cornflowerblue', 
-    'mediumaquamarine', 'turquoise', 'lightseagreen', 'mediumspringgreen', 'mediumseagreen', 'forestgreen', 
-    'yellowgreen', 'olivedrab', 'black', 'snow', 'honeydew', 'mintcream', 'azure', 'aliceblue', 'ghostwhite', 
-    'whitesmoke', 'seashell', 'beige', 'oldlace'
+    'red', 'orangered', 'darkorange', 'orange', 'gold', 'darkgoldenrod', 'goldenrod', 'saddlebrown', 'darkkhaki', 'palegoldenrod', 
+    'khaki', 'yellow', 'greenyellow', 'chartreuse', 'lime', 'limegreen', 'palegreen', 'springgreen', 'mediumspringgreen', 'lawngreen', 
+    'green', 'seagreen', 'mediumseagreen', 'darkseagreen', 'lightseagreen', 'aquamarine', 'mediumaquamarine', 'paleturquoise', 
+    'turquoise', 'mediumturquoise', 'darkturquoise', 'cadetblue', 'steelblue', 'lightsteelblue', 'powderblue', 'lightblue', 'skyblue', 
+    'lightskyblue', 'deepskyblue', 'dodgerblue', 'cornflowerblue', 'royalblue', 'blue', 'mediumblue', 'darkblue', 'navy', 'midnightblue', 
+    'blueviolet', 'indigo', 'darkslateblue', 'slateblue', 'mediumslateblue', 'mediumpurple', 'darkmagenta', 'purple', 'darkviolet', 
+    'darkorchid', 'salmon', 'darksalmon', 'lightcoral', 'mediumorchid', 'orchid', 'violet', 'plum', 'thistle', 'pink', 'lightpink', 
+    'hotpink', 'palevioletred', 'deeppink', 'mediumvioletred', 'brown', 'maroon', 'firebrick', 'indianred', 'rosybrown', 'darkred', 
+    'whitesmoke', 'gainsboro', 'lightgrey', 'silver', 'darkgray', 'gray', 'dimgray', 'black',
 ];
-
 // Drawing function to change colors of tiles when clicked
 function changeTileOnClick(event) {
     const xLoc = event.clientX - canvas.offsetLeft;
