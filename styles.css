@@ -1,0 +1,25 @@
+body {
+    height: 500px; /* Height of extension pop-out */
+    width: 400px; /* Width of extension pop-out */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#tileMap {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+}
+
+#tools {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+}
+#eraser, #save {
+    display: none;
+}

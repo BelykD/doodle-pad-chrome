@@ -1,0 +1,21 @@
+{
+    "name": "Doodle Pad",
+    "version": "1.0.0",
+    "description": "Doodle pad Chrome Extension",
+    "manifest_version": 3,
+    "author": "Dylan Belyk",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Doodle Pad"
+    },
+    "permissions": [
+        "activeTab"
+      ],      
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "run_at": "document_end",
+          "css": ["styles.css"]
+        }
+      ]
+}
