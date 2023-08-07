@@ -5,7 +5,7 @@ const toolSelect = document.getElementById('tools');
 const contextTools = toolSelect.getContext('2d');
  
 let color = 'black'; // Default pen color
-let drawing = false;
+let drawing = false; // Enables tile color changing with pen
 
 // Adding eraser button png
 const eraserImg = document.getElementById("eraser");
