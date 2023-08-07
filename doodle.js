@@ -73,14 +73,6 @@ function startDrawing() {
 function stopDrawing() {
     drawing = false;
 }
-// Drawing event listeners
-canvas.addEventListener('click', changeTileOnClick); // Handles single clicks for single tiles
-canvas.addEventListener('mousemove', changeTileOnClick); // Handles dragging to draw
-canvas.addEventListener('mousedown', startDrawing); // Checks when mouse is down to enable drawing
-canvas.addEventListener('mouseup', stopDrawing); // Checks when mouse is up to disable drawing
-// Tool selection event listener
-toolSelect.addEventListener('click', changeTool);
-
 // Adds each object details to the tool array
 function fillToolArray(){
     let colorCount = 0;
@@ -141,6 +133,13 @@ function drawMap() {
         context.fillRect(tiles.x, tiles.y, tiles.width, tiles.height);
     })
 }
+// Drawing event listeners
+canvas.addEventListener('click', changeTileOnClick); // Handles single clicks for single tiles
+canvas.addEventListener('mousemove', changeTileOnClick); // Handles dragging to draw
+canvas.addEventListener('mousedown', startDrawing); // Checks when mouse is down to enable drawing
+canvas.addEventListener('mouseup', stopDrawing); // Checks when mouse is up to disable drawing
+// Tool selection event listener
+toolSelect.addEventListener('click', changeTool);
 // Populating both tile and tool arrays
 fillTileArray();
 fillToolArray();
