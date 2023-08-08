@@ -39,7 +39,10 @@ const tools = [ // Array to store color palette data
 function changeTileOnClick(event) {
     const xLoc = event.clientX - canvas.offsetLeft;
     const yLoc = event.clientY - canvas.offsetTop;
-
+    // Stop drawing when mouse goes outside of canvas to prevent getting stuck on
+    if (xLoc <= 0 || xLoc >= 399 || yLoc >= 399 || yLoc <= 1) {
+        stopDrawing();
+    }
     tiles.forEach(tiles => {
         if (xLoc >= tiles.x && xLoc <= tiles.x + 20 && yLoc >= tiles.y && yLoc <= tiles.y + 20 && drawing == true) {
             tiles.fillStyle =  color;
