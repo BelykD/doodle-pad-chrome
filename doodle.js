@@ -4,9 +4,10 @@ Doodle Pad - Chrome Extension
 Author: Dylan Beylk
 */
 
+// Main tile map canvas
 const canvas = document.getElementById('tileMap');
 const context = canvas.getContext('2d');
-
+// Color palette, eraser, and save tile map
 const toolSelect = document.getElementById('tools');
 const contextTools = toolSelect.getContext('2d');
  
@@ -17,7 +18,6 @@ let drawing = false; // Enables tile color changing with pen
 const eraserImg = document.getElementById("eraser");
 eraserImg.src = 'Assets/eraser.png'
 const eraser = context.createPattern(eraserImg, "repeat");
-
 // Adding save button png
 const saveImg = document.getElementById("save");
 saveImg.src = 'Assets/save.png'
