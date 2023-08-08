@@ -73,9 +73,14 @@ function changeTool(event) {
 }
 // Adding selection outline to tile
 function outlineTile(tile) {
+    let borderWidth = 2; // 2px border width
     contextTools.strokeStyle = 'black'; // Change border color as needed
-    contextTools.lineWidth = 2; // Change border width as needed
-    contextTools.strokeRect(tile.x, tile.y, tile.width, tile.height);
+    contextTools.lineWidth = borderWidth; // Change border width as needed
+    contextTools.strokeRect(
+        tile.x + borderWidth / 2, // Adjust for border offsets
+        tile.y + borderWidth / 2, 
+        tile.width - 2, // Making border 2px smaller than tile to fit inside tile
+        tile.height - 2);
 }
 // Mouse down event listener to start drawing
 function startDrawing() {
