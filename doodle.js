@@ -40,7 +40,7 @@ function changeTileOnClick(event) {
     const xLoc = event.clientX - canvas.offsetLeft;
     const yLoc = event.clientY - canvas.offsetTop;
     // Stop drawing when mouse goes outside of canvas to prevent getting stuck on
-    if (xLoc <= 0 || xLoc >= 399 || yLoc >= 399 || yLoc <= 1) {
+    if (xLoc <= 1 || xLoc >= 399 || yLoc >= 399 || yLoc <= 1) {
         stopDrawing();
     }
     tiles.forEach(tiles => {
