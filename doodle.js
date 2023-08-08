@@ -56,6 +56,8 @@ function changeTool(event) {
         // Checking for eraser or save button first
         if (xLoc >= 0 && xLoc <= 60 && yLoc >= 0 && yLoc <= 50) {
             color = 'white';
+            drawTools(); // Reseting tools
+            outlineTile({ x: 0, y: 0, width: 60, height: 50 }); // Adding selection outline to eraser
         } else if (xLoc >= 0 && xLoc <= 60 && yLoc >= 50 && yLoc <= 100) {
             const dataURL = canvas.toDataURL('image/png'); // Save image as a png file type
             const saveDoodle = document.createElement('a'); // Creating a element
@@ -64,8 +66,16 @@ function changeTool(event) {
             saveDoodle.click(); // Initiating save
         } else if (xLoc >= tools.x && xLoc <= tools.x + 20 && yLoc >= tools.y && yLoc <= tools.y + 20) {
             color = tools.fillStyle;
+            drawTools(); // Reseting tools
+            outlineTile(tools); // Adding selection outline to selected color
         }
     });
+}
+// Adding selection outline to tile
+function outlineTile(tile) {
+    contextTools.strokeStyle = 'black'; // Change border color as needed
+    contextTools.lineWidth = 2; // Change border width as needed
+    contextTools.strokeRect(tile.x, tile.y, tile.width, tile.height);
 }
 // Mouse down event listener to start drawing
 function startDrawing() {
