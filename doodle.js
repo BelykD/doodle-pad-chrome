@@ -56,19 +56,21 @@ function changeTileOnClick(event) {
 function changeTool(event) {
     const xLoc = event.clientX - toolSelect.offsetLeft;
     const yLoc = event.clientY - toolSelect.offsetTop;
-    // Checks each tile in tools for a match - color change, eraser, or save
+    // Checks for save button
+    if (xLoc >= 0 && xLoc <= 60 && yLoc >= 50 && yLoc <= 100) {
+        const dataURL = canvas.toDataURL('image/png'); // Save image as a png file type
+        const saveDoodle = document.createElement('a'); // Creating a element
+        saveDoodle.href = dataURL; // Setting data URL as elements href
+        saveDoodle.download = 'mydoodle.png'; // Filename to be saved as
+        saveDoodle.click(); // Initiating save
+    }
+    // Checks each tile in tools for a match - color change or eraser
     tools.forEach(tools => {
         // Checking for eraser or save button first
         if (xLoc >= 0 && xLoc <= 60 && yLoc >= 0 && yLoc <= 50) {
             color = 'white';
             drawTools(); // Reseting tools
             outlineTile({ x: 0, y: 0, width: 60, height: 50 }); // Adding selection outline to eraser
-        } else if (xLoc >= 0 && xLoc <= 60 && yLoc >= 50 && yLoc <= 100) {
-            const dataURL = canvas.toDataURL('image/png'); // Save image as a png file type
-            const saveDoodle = document.createElement('a'); // Creating a element
-            saveDoodle.href = dataURL; // Setting data URL as elements href
-            saveDoodle.download = 'mydoodle.png'; // Filename to be saved as
-            saveDoodle.click(); // Initiating save
         } else if (xLoc >= tools.x && xLoc <= tools.x + 20 && yLoc >= tools.y && yLoc <= tools.y + 20) {
             color = tools.fillStyle;
             drawTools(); // Reseting tools
