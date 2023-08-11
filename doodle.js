@@ -73,7 +73,7 @@ function changeTool(event) {
             outlineTile({ x: 0, y: 0, width: 60, height: 50 }); // Adding selection outline to eraser
         } else if (xLoc >= tools.x && xLoc <= tools.x + 20 && yLoc >= tools.y && yLoc <= tools.y + 20) {
             color = tools.fillStyle;
-            drawTools(); // Reseting tools
+            drawTools(); // Resetting tools
             outlineTile(tools); // Adding selection outline to selected color
         }
     });
