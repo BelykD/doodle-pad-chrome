@@ -1,23 +1,36 @@
 body {
-    height: 500px; /* Height of extension pop-out */
+    height: 550px; /* Height of extension pop-out */
     width: 400px; /* Width of extension pop-out */
     overflow: hidden;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#tileMap {
+#canvas { /* Canvas */
     width: 400px;
     height: 400px;
-    position: absolute;
+    position: fixed;
+    align-items: center;
     bottom: 0;
 }
-#tools {
+#colors { /* Color palette */
     width: 400px;
     height: 100px;
-    position: absolute;
+    position: fixed;
     top: 0;
 }
-#eraser, #save {
-    display: none;
+#tools { /* Tool selection */
+    width: 400px;
+    height: 50px;
+    position: fixed;
+    top: 100px;
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    z-index: 9999;
+}
+#pen, #eraser, #paintBucket, #eyeDropper, #undoRedo, #clear, #save {
+    display: none; /* Hide images used for the tools */
 }
