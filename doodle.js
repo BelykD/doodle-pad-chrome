@@ -1,7 +1,7 @@
 /*
 Doodle Pad - Chrome Extension
 
-Author: Dylan Beylk
+Author: Dylan Belyk
 */
 
 // Main tile map canvas
